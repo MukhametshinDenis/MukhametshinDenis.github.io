@@ -1,0 +1,81 @@
+@media only screen and (max-width: 1200px) {
+  header ul li {
+    padding: 10px 15px; }
+  .carousel form input {
+    padding: 7px; }
+  .carousel form button {
+    padding: 10px 28px;
+    text-align: center;
+    margin-left: 20px; }
+  .services .service {
+    margin-left: 90px; }
+  .works .work.one {
+    background-position: 0px top; }
+  .works .work.two {
+    background-position: -222px top; }
+  .works .work.three {
+    background-position: -441px top; }
+  .works .work.four {
+    background-position: -666px top; }
+  .works .work.five {
+    background-position: -881px top; }
+  .works .work .work_image {
+    width: 180px;
+    height: 180px;
+    margin: 50px auto 60px; } }
+
+@media only screen and (max-width: 992px) {
+  header {
+    text-align: center; }
+    header ul {
+      text-align: center;
+      border-top: 2px #ddd solid;
+      padding: 0; }
+      header ul li {
+        padding: 29px;
+        border-left: none; }
+  .carousel form input {
+    display: block;
+    margin: 10px auto;
+    padding: 7px 44px; }
+  .carousel form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 89px; }
+  .services .service {
+    display: block;
+    margin: 5px auto;
+    width: 100%;
+    height: 300px; }
+  .lease .equpment img {
+    width: 90%;
+    text-align: center; }
+  .lease .equpment a {
+    padding: 10px; }
+  .works .work.one {
+    background-position: -21px top; }
+  .works .work.two {
+    background-position: -241px top; }
+  .works .work.three {
+    background-position: -460px top; }
+  .works .work.four {
+    background-position: -685px top; }
+  .works .work.five {
+    background-position: -900px top; }
+  .works .work .work_image {
+    width: 143px;
+    height: 143px;
+    margin: 80px auto 80px; }
+  .works .work h5 {
+    text-align: center;
+    font-weight: normal;
+    margin: 25px; }
+  .painting .paint {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    height: 300px; }
+  .form form {
+    border-right: 3px solid #F9BD03; }
+  footer {
+    text-align: center; } }
