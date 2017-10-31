@@ -1,0 +1,121 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px) {
+	.how_do_we_work {
+	-webkit-background-size: auto;
+	background-size: auto;
+}
+.form {
+	-webkit-background-size: auto;
+	background-size: auto;
+}
+}
+@media only screen and (max-width : 1200px) {
+header li{
+	padding: 80px 5px 10px;
+}
+header p {
+	margin-left: 100px;
+	margin-right: 0;
+}
+header {
+	-webkit-background-size: auto;
+	background-size: auto;
+}
+.works img {
+	height: 278px;
+	width: 301px;
+}
+.services span {
+	margin-bottom: 50px;
+}
+.services h5 {
+	font-size: 15px;
+}
+.block {
+	background-image: url(../img/decoration_block_1200.png);
+	width: 316px;
+}
+.block:hover {
+	background-image: url(../img/decoration_block_hover_1200.png);
+}
+.block ul{
+	font-size: 16px;
+}
+.first button {
+	margin-top: 152px;
+}
+.second button {
+	margin-top: 130px;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.phone {
+	margin-top: 10px;
+}
+.services .image {
+	display: none;
+}
+.block {
+	background-image: url(../img/decoration_block.png);
+	width: 366px;
+}
+.block:hover {
+	background-image: url(../img/decoration_block_hover.png);
+}
+.calculation {
+	-webkit-background-size: auto;
+	background-size: auto;
+	background-position: top center;
+}
+footer {
+	text-align: center;
+}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+button {
+	margin-top: 20px;
+}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1202px) {
+
+}
