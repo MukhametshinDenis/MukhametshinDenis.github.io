@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'TTMastersDEMOBlack';
+  src: url('TTMastersDEMOBlack.eot?#iefix') format('embedded-opentype'),  url('TTMastersDEMOBlack.otf')  format('opentype'),
+	     url('TTMastersDEMOBlack.woff') format('woff'), url('TTMastersDEMOBlack.ttf')  format('truetype'), url('TTMastersDEMOBlack.svg#TTMastersDEMOBlack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
