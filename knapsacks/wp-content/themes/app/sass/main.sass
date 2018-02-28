@@ -1,0 +1,408 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+*
+	padding: 0
+	margin: 0
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.2
+	overflow-x: hidden
+	.container
+		max-width: 1170px
+		margin: 0 auto
+		h1
+			font-family: CalamaRegular
+			font-size: 94px
+			text-transform: uppercase
+			color: #1D1D1D
+			text-shadow: 10px 10px 0px $accent
+			letter-spacing: 8px
+		h2
+			font-family: CodeProBold
+			font-size: 49px
+			text-transform: uppercase
+			
+		h3
+			font-family: semibold
+			font-size: 44px
+			text-align: center
+		h4
+			font-family: SegoeUISemiBoldItalic
+			font-size: 22px
+			font-weight: 800
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.header_top
+	background-color: #1D1D1D
+	padding: 20px 0
+	.container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		.logo
+			display: inline-block
+			vertical-align: middle
+		ul
+			display: inline-block
+			list-style-type: none
+			padding: 0
+			margin: 0
+			vertical-align: middle
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-basis: 70%
+			li
+				display: inline-block
+				color: $accent
+				font-family: semilight
+				font-size: 18px
+				a
+					text-decoration: none
+					color: $accent
+					font-size: 20px
+					&:hover
+						text-decoration: underline
+				img
+					vertical-align: middle
+		button
+			border: none
+			outline: none
+			cursor: pointer
+			padding: 5px 15px 10px
+			color: #1D1D1D
+			background-color:  $accent
+			font-family: semilight
+			font-size: 20px
+
+header
+	background-color: #EAEAEA
+	.container
+		position: relative
+		h1
+			padding-top: 100px
+			display: inline-block
+			margin-bottom: 10px
+		img
+			position: absolute
+			top: 60px
+			right: 0
+		.price
+			text-align: center
+			position: relative
+			left: -50px
+			.old_price
+				font-family: semilight
+				font-size: 28px
+				position: relative
+				left: 60px
+				&:before
+					border-bottom: 2px solid red
+					position: absolute
+					content: ""
+					width: 100%
+					top: 50%
+					transform: rotate(-16deg);
+			.now_price
+				font-family: SegoeUI-Black
+				font-size: 42px
+				color: #FF0008
+				display: block
+				text-shadow: 0 -8px 6px #FFFFFF, 0 -8px 6px #FFFFFF, 0 8px 6px #FFFFFF, 0 8px 6px #FFFFFF,-8px 0 6px #FFFFFF, 8px 0 6px #FFFFFF, -8px 0 6px #FFFFFF, 8px 0 6px #FFFFFF, -1px -8px 6px #FFFFFF, 1px -8px 6px #FFFFFF,-1px  8px 6px #FFFFFF, 1px 8px 6px #FFFFFF, -8px -1px 6px #FFFFFF, 8px -1px 6px #FFFFFF, -8px 1px 6px #FFFFFF, 8px 1px 6px #FFFFFF, -2px -8px 6px #FFFFFF, 2px -8px 6px #FFFFFF, -2px 8px 6px #FFFFFF, 2px 8px 6px #FFFFFF, -8px -2px 6px #FFFFFF, 8px -2px 6px #FFFFFF, -8px 2px 6px #FFFFFF, 8px 2px 6px #FFFFFF, -3px -8px 6px #FFFFFF, 3px -8px 6px #FFFFFF, -3px  8px 6px #FFFFFF, 3px  8px 6px #FFFFFF, -8px -3px 6px #FFFFFF, 8px -3px 6px #FFFFFF, -8px  3px 6px #FFFFFF, 8px 3px 6px #FFFFFF, -4px -8px 6px #FFFFFF, 4px -8px 6px #FFFFFF, -4px 8px 6px #FFFFFF, 4px 8px 6px #FFFFFF, -8px -4px 6px #FFFFFF, 8px -4px 6px #FFFFFF, -8px 4px 6px #FFFFFF, 8px 4px 6px #FFFFFF, -5px -8px 6px #FFFFFF, 5px -8px 6px #FFFFFF, -5px 8px 6px #FFFFFF, 5px 8px 6px #FFFFFF, -8px -5px 6px #FFFFFF, 8px -5px 6px #FFFFFF, -8px 5px 6px #FFFFFF, 8px 5px 6px #FFFFFF, -6px -8px 6px #FFFFFF, 6px -8px 6px #FFFFFF, -6px 8px 6px #FFFFFF, 6px 8px 6px #FFFFFF, -8px -6px 6px #FFFFFF, 8px -6px 6px #FFFFFF, -8px 6px 6px #FFFFFF, 8px 6px 6px #FFFFFF, -7px -8px 6px #FFFFFF, 7px -8px 6px #FFFFFF, -7px 8px 6px #FFFFFF, 7px 8px 6px #FFFFFF, -8px -7px 6px #FFFFFF, 8px -7px 6px #FFFFFF, -8px 7px 6px #FFFFFF, 8px 7px 6px #FFFFFF, -8px -8px 6px #FFFFFF, 8px -8px 6px #FFFFFF, -8px 8px 6px #FFFFFF, 8px 8px 6px #FFFFFF, -8px -8px 6px #FFFFFF, 8px -8px 6px #FFFFFF, -8px 8px 6px #FFFFFF, 8px 8px 6px #FFFFFF
+				margin-bottom: 5px
+			.discount
+				font-family: SegoeUI-Black
+				color: $accent
+				background-image: url(../img/discount_bg.png)
+				background-repeat: no-repeat
+				background-size: column
+				display: inline-block
+				padding: 10px 20px
+				.discount_descr
+					font-size: 15px
+					text-align: right
+					border-right: 3px solid $accent
+					display: inline-block
+					padding-right: 5px
+					vertical-align: middle
+				.discount_price
+					font-size: 20px
+					vertical-align: middle
+		a
+			text-decoration: none
+			button
+				border: none
+				font-family: semibold
+				font-size: 25px
+				font-weight: 900
+				background-color: #EAEAEA
+				color: #000
+				border: 5px solid #070707
+				padding: 5px 20px 10px
+				box-shadow: 8px 8px 0px $accent
+				margin: 30px 0 100px
+				cursor: pointer
+
+.advantages
+	background-color: #EAEAEA
+	.container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+		padding: 50px 0
+		.item
+			text-align: center
+			background-image: url(../img/advantages_icon_bg.png)
+			background-repeat: no-repeat
+			width: 150px
+			span
+				display: block
+				font-family: semilight
+				font-size: 16px
+				line-height: 1
+
+.products
+	background-color: #EAEAEA
+	background-image: url(../img/products_bg.png)
+	background-repeat: no-repeat
+	background-position: center top
+	background-color: 100%
+	padding-bottom: 100px
+	padding-top: 50px
+	.container
+		h3
+			padding: 60px 0
+		.flex_container
+			display: flex
+			flex-direction: row
+			justify-content: center
+			flex-wrap: wrap
+			.product:nth-child(n+5)
+				display: none;
+			.product
+				background-color: #1D1D1D
+				display: block
+				width: 270px
+				text-align: center
+				padding-bottom: 10px
+				margin: 30px 10px 0
+				img
+					display: block
+					border: 3.5px solid $accent
+					margin-bottom: 10px
+					border-bottom: 1px solid $accent
+					width: 100%
+					box-sizing: border-box
+				span
+					color: $accent
+					font-family: semilight
+					display: block
+					height: 40px
+				ul
+					list-style-type: none
+					padding: 0 0 0 30px
+					margin: 0 
+					text-align: left
+					margin: 10px 0
+					li
+						font-family: semilight
+						color: #F9F9FA
+						font-size: 15px
+				.price
+					font-family: semibold
+					font-size: 22px
+					color: #F9F9FA
+					text-align: center
+			button
+				display: block
+				font-family: semibold
+				font-size: 18px
+				text-align: center
+				color: #21201D
+				border: none
+				background-color: $accent
+				padding: 5px 20px
+				width: 180px
+				margin: 10px auto
+				outline: none
+				cursor: pointer
+		button
+			border: none
+			font-family: SegoeUIRegular
+			font-size: 28px
+			color: $accent
+			background-color: #1D1D1D
+			padding: 5px 70px 10px
+			display: block
+			margin: 80px auto
+			max-width: 335px
+			outline: none
+			cursor: pointer
+
+.call_order
+	background-image: url(../img/call_order_bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center top
+	padding: 108px 0
+	.container
+		p
+			font-family: SegoeUISemiBoldItalic
+			font-size: 22px
+			font-style: italic
+			text-align: center
+			color: #E7E8EA
+			padding: 0 50px
+			line-height: 1.4
+		button
+			font-family: semibold
+			font-size: 19px
+			color: #1D1D1D
+			background-color: $accent
+			border: none
+			text-transform: uppercase
+			padding: 10px 70px
+			max-width: 335px
+			display: block
+			margin: 50px auto
+			cursor: pointer
+			outline: none
+
+.description
+	background-color: $accent
+	padding: 80px 0
+	.container
+		.flex_container
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			.item
+				width: 184px
+				img
+					border: 10px solid #000
+					box-sizing: border-box
+				span
+					font-family: CodeProBold
+					font-size: 13px
+					font-weight: bolder
+					text-transform: uppercase
+					line-height: 1
+		h4
+			margin-bottom: 40px
+
+.delivery
+	background-color: #EAEAEA
+	background-image: url(../img/delivery_bg.png)
+	background-repeat: no-repeat
+	background-size: 100%
+	padding-bottom: 100px
+	position: relative
+	top: 0px
+	h2
+		padding: 120px 0 50px
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 10px 0 10px 30px
+		border-left: 3px solid #1D1D1D
+		li
+			font-family: SegoeUISemiBoldItalic
+			font-size: 34px
+			margin-bottom: 20px
+			color: #1D1D1D
+
+footer
+	background-color: #1D1D1D
+	padding: 40px 0
+	text-align: center
+	a
+		margin-right: 50px
+		text-decoration: none
+		img
+			margin-right: 20px
+			vertical-align: middle
+		span
+			font-family: semilight
+			font-size: 34px
+			color: #EAEAEA
+			vertical-align: middle
+
+
+#modal
+	padding-top: 10px
+	h5
+		font-family: semibold
+		font-size: 29px
+		text-align: center
+	input
+		display: block
+		margin: 25px auto
+		width: 250px
+		padding: 15px 0 15px 30px
+		outline: none
+	button
+		background-color: $accent
+		border: none
+		display: block
+		margin: 20px auto
+		color: #1D1D1D
+		font-size: 20px
+		font-weight: 600
+		width: 200px
+		padding: 10px 20px
+		text-align: center
+		outline: none
+
+.iziModal .close 
+	position: absolute
+	top: 0
+	right: 10px
+	cursor: pointer
+.iziModal .close svg 
+	transform: rotate(45deg)
+	fill: #666
+	height: 30px
+	width: 30px
+
+
+
+
+@import "media" // Всегда в конце
