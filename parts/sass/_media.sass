@@ -1,0 +1,230 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	header, .form-second
+		.top-line
+			.nav
+				text-align: center
+			.phone
+				a
+					font-size: 18px
+			.address
+				span
+					font-size: 15px
+		.header-content
+			.block
+				h4
+					font-size: 22px
+			form
+				margin: 0
+
+	.form-second
+		.header-content
+			form
+				margin-top: 70px
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+	header, .form-second
+		.top-line
+			.nav
+				text-align: center
+			.phone
+				display: inline-block
+				float: right
+				margin: 0 30px
+				a
+					font-size: 18px
+			.address
+				display: inline-block
+				float: right
+				margin: 0 30px
+				span
+					font-size: 15px
+		.header-content
+			.block
+				h4
+					font-size: 26px
+					line-height: 1.2
+			form
+				margin: 0
+
+	.advantages
+		.items
+			.item
+				width: 49.99%
+
+	.stages
+		.item
+			.wrapper
+				&.one, &.two, &.four
+					&::after
+						display: none
+
+	.form-second
+		.header-content
+			form
+				margin-top: 70px
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+	header, .form-second
+		.logo
+			text-align: center
+		.top-line
+			.nav
+				text-align: center
+				padding: 30px 0 0
+				li
+					display: block
+			.phone
+				display: block
+				margin: 10px auto
+				float: none
+				text-align: center
+				background-image: none
+				padding: 0
+				a
+					font-size: 18px
+			.address
+				display: block
+				margin: 10px auto
+				float: none
+				text-align: center
+				background-image: none
+				padding: 0
+				span
+					font-size: 15px
+		.header-content
+			padding: 30px 0
+			.block
+				margin: 0 0 20px
+				text-align: center
+				h4
+					font-size: 26px
+					line-height: 1.2
+			form
+				margin: 20px auto
+				text-align: center
+				input
+					margin: 10px auto
+
+	.advantages
+		background-size: cover
+		.items
+			.item
+				width: 100%
+		.icon-key
+			&::before, &::after
+				width: 100px
+			&::after
+				left: 60%
+			&::before
+				right: 60%
+
+	.reviews
+		.owl-carousel
+			.item
+				display: block
+				text-align: center
+				.wrapper
+					margin: 0
+				.text
+					width: 100%
+					&::after
+						display: none
+//Extra small: >0
++media-breakpoint-down(xs)
+	header, .form-second
+		.logo
+			text-align: center
+		.top-line
+			.nav
+				text-align: center
+				padding: 30px 0 0
+				li
+					display: block
+			.phone
+				display: block
+				margin: 10px auto
+				float: none
+				text-align: center
+				background-image: none
+				padding: 0
+				a
+					font-size: 18px
+			.address
+				display: block
+				margin: 10px auto
+				float: none
+				text-align: center
+				background-image: none
+				padding: 0
+				span
+					font-size: 15px
+		.header-content
+			padding: 30px 0
+			.block
+				margin: 0 0 20px
+				text-align: center
+				h4
+					font-size: 26px
+					line-height: 1.2
+			form
+				margin: 20px auto
+				text-align: center
+				input
+					margin: 10px auto
+
+	.description
+		.wrapper
+			.block
+				font-size: 16px
+
+	.form
+		.button
+			white-space: normal
+
+	.icon-key
+			&::before, &::after
+				width: 100px
+			&::after
+				left: 60%
+			&::before
+				right: 60%
+
+	footer
+		.block
+			left: 0
+			top: 0
+			margin: 0
+			background-color: #fff
+			color: #292929
+			text-align: center
+		.map
+			display: none
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
+	

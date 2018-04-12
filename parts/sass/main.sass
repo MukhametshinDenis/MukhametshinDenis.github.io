@@ -1,0 +1,501 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.55
+	font-family: $default-font
+	overflow-x: hidden
+	color: #292929
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		padding: 8px 20px
+		text-transform: uppercase
+		text-align: center
+		margin: 6px 0
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+.h2
+	color: $accent
+	font-size: 32px
+	text-transform: uppercase
+.h3
+	color: #fff
+	font-size: 28px
+	text-transform: uppercase
+.h4
+	font-size: 26px
+	text-transform: uppercase
+.inverse
+	color: #fff
+	background-color: #000
+	h2
+		color: #fff
+		text-transform: uppercase
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 12px 30px
+	font-size: 16px
+	text-transform: uppercase
+	letter-spacing: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	margin: 6px 0
+	white-space: nowrap
+	cursor: pointer
+	&::after
+	    transition: background-color .2s ease
+	    position: absolute
+	    content: ''
+	    height: 4px
+	    bottom: 0
+	    width: 100%
+	    background-color: darken($accent, 50%)
+	    opacity: .18
+	    border-bottom-left-radius: 2px
+	    border-bottom-right-radius: 2px
+	    left: 0
+	&:focus, &:hover
+	    text-decoration: none
+	    color: #fff
+	&:hover
+	    background-color: lighten($accent, 5%)
+	    &::after
+	        opacity: .22
+	&:active
+	    background-color: darken($accent, 5%)
+	    &::after
+	        opacity: .32
+
+.arrow
+	position: absolute
+	bottom: -1px
+	width: 100%
+	background-color: #fff
+	&::before, &::after
+		content: ''
+		position: absolute
+		bottom: 100%
+		width: 50%
+		box-sizing: border-box
+	&::before
+		right: 50%
+		border-bottom: 50px solid #fff
+		border-right: 25px solid transparent
+	&::after
+		left: 50%
+		border-bottom: 50px solid #fff
+		border-left: 25px solid transparent
+
+.icon-key
+	padding: 10px 20px
+	position: relative
+	&::after, &::before
+		content: ''
+		position: absolute
+		width: 150px
+		height: 2px
+		display: inline-block
+		top: 50%
+		background-color: #BBBBBB
+	&::after
+		left: 54%
+	&::before
+		right: 54%
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+header, .form-second
+	background-image: url(../img/header-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	padding-top: 20px
+	position: relative
+	padding-bottom: 100px
+	.top-line
+		.nav
+			list-style-type: none
+			margin: 0
+			padding: 25px 0
+			> li
+				display: inline
+				border: 1px solid transparent
+				padding: 5px 10px
+				margin: 0 10px
+				a
+					color: #fff
+					text-decoration: none
+					font-size: 14px
+					font-weight: bold
+					text-transform: uppercase
+					&:hover, &.focus
+						text-decoration: none
+				&.active, &:hover
+					border: 1px solid $accent
+		.phone
+			padding-left: 30px
+			background-image: url(../img/icon-phone.svg)
+			background-repeat: no-repeat
+			background-position: center left
+			margin: 5px 0
+			a
+				font-size: 22px
+				font-weight: bold
+				color: #fff
+				letter-spacing: 2px
+				&:hover, &.focus
+					text-decoration: none
+		.address
+			padding-left: 30px
+			background-image: url(../img/icon-address.svg)
+			background-repeat: no-repeat
+			background-position: center left
+			margin: 5px 0
+			span
+				font-size: 17px
+				border-bottom: dashed 2px #fff
+				padding-bottom: 2px
+				letter-spacing: 1.5px
+	.header-content
+		padding: 120px 0
+		.block
+			padding: 20px
+			background-color: $accent
+			display: inline-block
+			margin-top: 85px
+			h4
+				line-height: 1
+			span
+				font-size: 23px
+				line-height: 1
+				text-transform: uppercase
+				letter-spacing: 2px
+		img
+			text-align: center
+			margin:
+				left: -55px
+				top: 100px
+		form
+			margin-left: -60px
+			.form-title
+				font-size: 22px
+				line-height: 1
+				letter-spacing: 2px
+				white-space: nowrap
+				display: block
+				margin-bottom: 20px
+				.bold
+					font-weight: bold
+					letter-spacing: 1.5px
+			input
+				min-width: 200px
+				display: block
+
+				
+.advantages
+	text-align: center
+	background-image: url(../img/advantages-bg.png)
+	background-repeat: no-repeat
+	background-position: center
+	padding-bottom: 50px
+	span
+		font-size: 20px
+		font-weight: bold
+		text-transform: uppercase
+		letter-spacing: 1px	
+	.items
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		.item
+			margin-top: 20px
+			width: 33.33%			
+			.wrapper
+				width: 90px
+				height: 90px
+				border: $accent solid 2px
+				display: flex
+				margin: 0 auto
+				border-radius: 50%
+				img
+					margin: auto
+
+.description
+	padding: 50px 0 100px
+	background-image: url(../img/description-bg.png)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	position: relative
+	h2
+		text-align: center
+		margin-bottom: 50px
+	.wrapper
+		display: block
+		width: 100%
+		position: relative
+		margin-bottom: 50px
+		img
+			width: 100%
+			height: auto
+		.block
+			position: absolute
+			top: -10px
+			right: 10px
+			padding: 8px 30px
+			display: block
+			background-color: $accent
+			text-transform: uppercase
+			font-weight: bold
+			letter-spacing: 2px
+			font-size: 18px
+	p
+		font-size: 20px
+
+.stages
+	text-align: center
+	background-image: url(../img/stages-bg.png)
+	background-repeat: no-repeat
+	background-position: 85% 95%
+	.item
+		margin: 40px 0
+		.wrapper
+			width: 90px
+			height: 90px
+			border: 2px solid $accent
+			border-radius: 50%
+			display: flex
+			margin: 0 auto 10px
+			position: relative
+			background-color: #fff
+			z-index: 2
+			&.one, &.two, &.four
+				&::after
+					background-image: url(../img/stages-after.png)
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: center
+					content: ''
+					position: absolute
+					display: block
+					width: 300%
+					height: 32px
+					top: 30%
+					left: 105%
+					z-index: 1
+			span
+				margin: -5px auto
+				font-size: 60px
+				font-weight: bold
+		.stages-title
+			font-weight: bold
+			font-size: 18px
+			text-transform: uppercase
+
+.form
+	background-image: url(../img/form-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 50px 0 100px
+	position: relative
+	.block
+		padding: 20px
+		background-color: $accent
+		display: inline-block
+		text-align: center
+		margin-bottom: 50px
+		width: 100%
+		h4
+			line-height: 1
+		span
+			font-size: 23px
+			line-height: 1
+			text-transform: uppercase
+	form
+		text-align: center
+		background-image: url(../img/form-form-bg.png)
+		background-repeat: no-repeat
+		background-size: 100% 100%
+		padding: 50px
+		input
+			width: 100%
+		textarea
+			width: 100%
+			height: 85px
+			resize: none
+		.button
+			width: 100%
+
+.advantages-second
+	text-align: center
+	padding: 10px 0
+	background-image: url(../img/advantages-second-bg.png)
+	background-repeat: no-repeat
+	background-position: 65% 90%
+	span
+		font-size: 20px
+		font-weight: bold
+		text-transform: uppercase
+		letter-spacing: 1px
+	.item
+		margin: 30px 0
+		.wrapper
+			width: 90px
+			height: 90px
+			border: 2px solid $accent
+			border-radius: 50%
+			display: flex
+			margin: 0 auto 10px
+			img
+				margin: auto
+		span
+			font-weight: bold
+			font-size: 24px
+			text-transform: uppercase
+
+.form-second
+	background-image: url(../img/form-second-bg.png)
+	padding: 0 0 50px
+	form
+		margin-top: 70px
+
+.reviews
+	background-image: url(../img/reviews-bg.svg)
+	background-repeat: no-repeat
+	background-position: center 90%
+	padding-bottom: 50px
+	.h2, .icon-key
+		text-align: center
+	.owl-carousel
+		margin: 50px 0
+		position: relative
+		.item
+			display: flex
+			justify-content: space-between
+			.wrapper
+				width: 122px
+				height: 122px
+				display: inline-block
+				border-radius: 50%
+				position: relative
+				overflow: hidden
+				margin-right: 30px
+				img
+					width: 100%
+					height: 100%
+					position: absolute
+			.text
+				width: 75%
+				padding-left: 10px
+				&::after
+					content: ''
+					width: 2px
+					height: 122px
+					display: block
+					position: absolute
+					background: $accent
+					top: 0
+					left: 135px
+				.name
+					font-size: 18px
+					font-weight: bold
+					color: $accent
+				.car
+					font-size: 16px
+					letter-spacing: 1px
+					margin-left: 20px
+				p
+					font-size: 14px
+		.owl-nav
+			width: 100%
+			button
+				display: block
+				border-radius: 50%
+				box-shadow: 0 0 10px rgba(0,0,0,0.5)
+				position: absolute
+				height: 40px
+				top: 25%
+				outline: none
+
+				&:hover
+					span
+						color: $accent
+				&.owl-prev
+					left: -80px
+				&.owl-next
+					right: -80px
+				span
+					font-size: 50px
+					line-height: .5
+					padding: 15px
+					transition: color .25s ease
+
+footer
+	position: relative
+	.block
+		width: 100%
+		background-color: rgba(#000, .8)
+		z-index: 9
+		position: absolute
+		margin-top: 50px
+		color: #fff
+		padding: 100px 50px 20px
+		.h3
+			text-align: center
+			padding: 20px
+			background-color: $accent
+			position: absolute
+			width: 100%
+			top: 0
+			left: 0
+		.phone
+			margin: 10px 0
+			display: block
+			font-size: 22px
+			font-weight: bold
+		p
+			font-size: 17px
+	.map
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.5)
+			z-index: 10
+			pointer-events: none
+			top: 0
+			left: 0
+
+@import "media" // Always at the end
