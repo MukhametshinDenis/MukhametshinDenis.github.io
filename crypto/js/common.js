@@ -35,31 +35,40 @@ $(function() {
 	$('select, #radio').styler(); //http://dimox.name/jquery-form-styler/
 
 	//animate
-	$('.time, .address, .certificate, header .menu, .litecoin, .dash, .amount, .soc-icons, footer .info').addClass('animated slideInRight');
-	$(' .bg-log, .bitcoin, .ethereun, .plan, footer .menu').addClass('animated slideInLeft');
-	$(' .statistics, footer .logo-footer').addClass('animated slideInDown');
-	$('.content-text, .button').addClass('animated fadeIn');
-	$('.description, .table').addClass('animated rubberBand');
-	$('.h2').addClass('animated flash');
-	$('.calculate .block').addClass('animated shake');
-	$('.advantages .block').addClass('animated bounce');
-	$('.title-pay, .pay-icons').addClass('animated jello');
-});
-//modal-popup for .modal-enter
-$(".modal-enter").iziModal({
-	backgound : 'transparent',
-	padding : 30,
-});
-$(document).on('click', '.trigger-ent', function (event) {
-    $('.modal-enter').iziModal('open');
-});
-$("#btn-send-ent").click(function() {$('.modal-enter').iziModal('close');})
+	new WOW().init();
+	
+	$('.time, .address, .certificate, header .menu, .litecoin, .dash, .amount, .soc-icons, footer .info').addClass('wow slideInRight');
+	$(' .bg-log, .bitcoin, .ethereun, .plan, footer .menu').addClass('wow slideInLeft');
+	$(' .statistics, footer .logo-footer').addClass('wow slideInDown');
+	$('.content-text, .button').addClass('wow fadeIn');
+	$('.description, .table').addClass('wow rubberBand');
+	$('.h2').addClass('wow flash');
+	$('.calculate .block').addClass('wow shake');
+	$('.advantages .block').addClass('wow bounce');
+	$('.title-pay, .pay-icons').addClass('wow jello');
 
-//modal-popup for .modal-registration
-$(".modal-registration").iziModal({
-	width : 1000
+
+	//modal-popup for .modal-enter
+	$(".modal-enter").iziModal({
+		backgound : 'transparent',
+		padding : 30,
+	});
+	$(document).on('click', '.trigger-ent', function (event) {
+	    $('.modal-enter').iziModal('open');
+	});
+	$("#btn-send-ent").click(function() {$('.modal-enter').iziModal('close');})
+
+	//modal-popup for .modal-registration
+	$(".modal-registration").iziModal({
+		width : 1000
+	});
+	$(document).on('click', '.trigger-reg', function (event) {
+	    $('.modal-registration').iziModal('open');
+	});
+	$("#btn-send-reg").click(function() {$('.modal-registration').iziModal('close');})
+
+
 });
-$(document).on('click', '.trigger-reg', function (event) {
-    $('.modal-registration').iziModal('open');
+$(document).ready(function() {
+	
 });
-$("#btn-send-reg").click(function() {$('.modal-registration').iziModal('close');})
