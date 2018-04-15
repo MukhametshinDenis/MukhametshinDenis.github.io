@@ -1,0 +1,302 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+	header
+		.header-top
+			.bg-log
+				margin-left: -252px
+			.top-info
+				.time, .address, .certificate
+					padding-left: 0
+					background-image: none
+		.menu
+			.nav
+				li
+					padding-left: 0px
+					&::after
+						display: none
+					&:last-child
+						margin-left: 0
+						border-left: none
+						&::before
+							display: none
+		.header-content
+			.content-text
+				&::after
+					display: none
+
+	.calculate
+			.block
+				margin-bottom: 30px
+				&.mg-top
+					margin-top: 0
+					.block-hover
+						margin-top: 0
+	
+	.statistic
+		.table
+			table
+				padding: 0 10px
+				width: 49%
+				&:last-child
+					margin-left: 0%
+				.table-title
+					font-size: 22px
+					top: -50px
+				tr
+					td
+						padding: 12px 20px
+	.pay-icons
+		.wrapper
+			margin: 0 20px
+
+	footer
+		.menu
+			.footer-nav
+				li
+					padding: 10px 20px
+//Medium: ≥768px
++media-breakpoint-down(md)
+	header
+		.header-top
+			.bg-log
+				margin-left: -257px
+				&::before
+					display: none
+			.top-info
+				.time, .address, .certificate
+					padding-left: 70px
+				.time
+					background-image: url(../img/icon-time.png)
+				.address
+					background-image: url(../img/icon-address.png)
+				.certificate
+					background-image: url(../img/icon-certificate.png)
+		.menu
+			top: 0
+			margin: 20px 0
+			.nav
+				padding-left: 5px
+				&::after
+					content: ''
+					position: absolute
+					left: -43px
+					top: 0
+					bottom: 0
+					border: 22px solid transparent
+					border-right: 22px solid #fff
+
+			.registration
+				display: inline-block
+				span
+					display: none
+			.icon-enter
+				display: inline-block
+				position: absolute
+				top: 10px
+				right: -30px
+		.statistics
+			.flex-item
+				.info
+					&.investment, &.account
+						margin-bottom: 10px
+
+	.calculate
+		.plan, .amount
+			width: 100%
+			margin: 10px 0
+			&::after
+				display: none
+
+	.statistic
+		.table
+			background-image: none
+			table
+				background-image: url(../img/table-bg.png)
+				background-repeat: no-repeat
+				background-size: cover 
+				background-position: center
+				margin-bottom: 50px
+				padding: 0 10px
+				width: 100%
+				&:last-child
+					margin-left: 0%
+				tbody
+					tr
+						width: 100%
+						td
+							padding: 12px 90px
+							&.coin
+								padding-right: 5px
+							&.name
+								padding-left: 5px
+
+	footer
+		padding-top: 30px
+		text-align: center
+		.menu
+			.footer-nav
+				li
+					padding: 10px 20px
+		.soc-icons
+			left: 0
+			margin: 20px auto
+		.info
+			top: 0
+			text-align: left
+							
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+	header
+		.header-top
+			.bg-log
+				margin-left: -222px
+			.top-info
+				.time, .address, .certificate
+					margin: 20px 0
+			.menu
+				padding: 20px
+				float: right
+				margin-top: 80px
+				.burger
+					display: block
+					float: right
+				.nav
+					top: 50px
+					left: -102%
+					padding: 20px
+					width: 204%
+					position: absolute
+					display: none
+					&::after, &::before
+						display: none
+					li
+						display: block
+						text-align: center
+						border-bottom: 1px solid #ddd
+						position: relative
+						&:last-child
+							border-bottom: none
+						a
+							width: 100%
+							display: block
+							&.active, &:hover, &:focus
+								border: none
+								color: $accent
+			.icon-enter
+				display: inline-block
+				position: absolute
+				top: 0px
+				right: 0px
+		.statistics
+			margin-top: 20px
+			.flex-item
+				.info
+					.title
+						color: #999797
+
+	.description
+		background: none
+
+	.statistic
+		.table
+			table
+				tbody
+					tr
+						td
+							padding: 12px 45px
+
+	footer
+		padding-top: 30px
+		text-align: center
+		.menu
+			margin-top: 30px
+			.footer-nav
+				li
+					display: block
+					text-align: center
+					&:first-child
+						padding: inherit
+					&:after
+						display: none
+		.info
+			padding-left: 20px
+
+
+
+//Extra small: >0
++media-breakpoint-down(xs)
+	header
+		.header-top
+			.bg-log
+				margin-left: -100px
+		.header-content
+			.coin
+				width: 100%
+				&.ethereun, &.dash
+					width: 100%
+		.statistics
+			background-image: none
+			flex-wrap: wrap
+			.flex-item
+				width: 100%
+				text-align: center
+				float: none
+				&:first-child
+					order: 1
+					width: 50%
+				&:last-child
+					width: 50%
+				.info
+					.title
+						font-size: 14px
+					&.investment, &.payout
+						text-align: center
+
+	.statistic
+		.table
+			overflow: auto
+			max-width: 100%
+			background-image: none
+			table
+				width: 100%
+				background-image: none
+				tbody
+					width: 100%
+					background: #fff
+				.table-title
+					font-size: 18px
+					left: 10px
+					top: -40px
+		.pay-icons
+			background-image: none
+
+			.wrapper
+				margin: 0 20px
+				border-top: solid 1px #BF4E51
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)

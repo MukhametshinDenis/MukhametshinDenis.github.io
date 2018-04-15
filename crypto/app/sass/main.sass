@@ -1,0 +1,990 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.h2
+	color: #626264
+	font-size: 30px
+	font-family: intro
+	text-transform: uppercase
+	position: relative
+	display: inline
+	line-height: 3
+	&::after, &::before
+		content: ''
+		width: 648px
+		height: 1px
+		top: 49%
+		position: absolute
+		display: block
+		background-image: url(../img/h2-after-before.png)
+	&::after
+		left: 100%
+	&::before
+		right: 100%
+
+.h3
+	color: #fff
+	font-size: 26px
+	font-family: intro
+	text-transform: uppercase
+	letter-spacing: 1px
+
+.h4
+	color: #D2D2D2
+	font-size: 22px
+	font-family: intro
+	text-transform: uppercase
+
+.inverse
+	color: #fff
+	.h2
+		color: #fff
+
+
+.button
+	width: 250px
+	display: inline-block
+	border: none
+	text-decoration: none
+	background-color: $accent
+	padding: 12px 45px
+	font-size: 16px
+	text-transform: uppercase
+	font-weight: 600
+	text-align: center
+	position: relative
+	left: 20px
+	outline: none
+	transition: background-color .1s ease	
+	cursor: pointer
+	color: #fff !important
+	&::before
+		content: ''
+		position: absolute
+		right: -42px
+		top: 0
+		border: 23px solid transparent
+		border-left: 20px solid $accent
+		bottom: 0
+	&::after
+		content: ''
+		position: absolute
+		left: -43px
+		top: 0
+		bottom: 0
+		border: 22px solid transparent
+		border-right: 22px solid $accent
+
+header
+	background-image: url(../img/header-bg-statistic.png), url(../img/header-bg.png)
+	background-size: 100% auto, cover
+	background-repeat: no-repeat
+	background-position: 10px 78%, center top
+	position: relative
+	padding-bottom: 50px
+	.header-top
+		.bg-log
+			padding:
+				top: 33px
+				bottom: 10px
+			background-image: url(../img/bg-logo.png)
+			background-repeat: no-repeat
+			margin-left: -212px
+			position: relative
+			&::before
+					content: ''
+					position: absolute
+					left: 95%
+					top: 90px
+					width: 55px
+					height: 46px
+					background-color: #fff
+			.logo
+				width: 144px
+				height: 144px
+				background-color: #fff
+				border-radius: 50%
+				box-shadow: 0 0 15px rgba(#000, .2)
+				text-align: center
+				padding-top: 12px
+				position: relative
+				left: 218px
+			span
+				font-size: 14px
+				text-transform: uppercase
+				color: #A7A7A7
+				display: block
+				.bold
+					font-weight: bold
+					font-size: 16px
+					color: #8B4C9B
+		.top-info
+			padding-top: 5px
+			box-sizing: border-box
+			.time, .address, .certificate
+				background-repeat: no-repeat
+				background-position: 10px center
+				padding-left: 60px
+				span
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 13px
+				p
+					font-size: 12px
+			.time
+				background-image: url(../img/icon-time.png)
+				#displayMoment
+					font-size: 29px
+					font-weight: 300
+					line-height: 1
+			.address
+				background-image: url(../img/icon-address.png)
+			.certificate
+				background-image: url(../img/icon-certificate.png)
+
+	.menu
+		background-color: rgba(#fff, .1)
+		padding: 5px 0
+		top: -102px
+		position: relative
+		float: right
+		width: 100%
+		.burger
+			display: none
+			div
+				width: 50px
+				height: 3px
+				background-color: #fff
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+		.nav
+			text-transform: none
+			padding: 0
+			margin: 0
+			background-color: #fff
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				right: -42px
+				top: 0
+				border: 23px solid transparent
+				border-left: 20px solid #fff
+				bottom: 0
+			li
+				display: inline-block
+				padding: 10px 18px
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					height: 100%
+					width: 10px
+					background-image: url(../img/nav-arrow.png)
+					background-repeat: no-repeat
+					background-position: right center
+					right: -5px
+					top: 0
+				&:last-child, &:nth-child(5)
+					&::after
+						display: none
+				&:last-child
+					border-left: 1px solid #ddd
+					margin-left: 7px
+					&::before
+						content: ''
+						position: absolute
+						height: 30px
+						width: 30px
+						border-radius: 50%
+						box-shadow: 0 0 2px rgba(#000, .2)
+						background-color: #fff
+						background-image: url(../img/nav-enter-key.png)
+						background-repeat: no-repeat
+						background-position: center
+						top: 7px
+						left: -18px
+					a
+						font-weight: 300
+				a
+					padding: 13px 0
+					color: #626264
+					text-transform: uppercase
+					text-decoration: none
+					font-weight: bold
+					transition: border .25s ease
+					&.active, &:hover, &:focus
+						border-top: 3px solid rgba(#fff, .3)
+						border-bottom: 3px solid rgba(#fff, .3)
+		.registration
+			background-repeat: no-repeat
+			background-position: left center
+			background-image: url(../img/icon-registration.png)
+			display: block
+			padding-left: 40px
+			padding-top: 10px
+			color: #fff
+			text-transform: uppercase
+			height: 100%
+			cursor: pointer
+		.icon-enter
+			height: 30px
+			width: 30px
+			border-radius: 50%
+			box-shadow: 0 0 2px rgba(#000, .2)
+			background-color: #fff
+			display: block
+			text-align: center
+			display: none
+			cursor: pointer
+	.header-content
+		.coin
+			width: 460px
+			.coin-name
+				font-family: intro
+				font-size: 18px
+				text-transform: uppercase
+			.coin-value
+				font-weight: bold
+				font-size: 39px
+				background-repeat: no-repeat
+				padding: 0 50px
+				span
+					padding-left: 30px
+					background-image: url(../img/coin-value-big-down.png)
+					background-repeat: no-repeat
+					background-position: left center
+			&.bitcoin
+				text-align: left
+				.coin-value
+					text-align: right
+					background-image: url(../img/coin-value-bitcoin-bg.png), url(../img/coin-value-bitcoin.png)
+					background-position: right top , left center
+					position: relative
+			&.litecoin
+				text-align: right
+				float: right
+				.coin-value
+					text-align: left
+					background-image: url(../img/coin-value-litecoin-bg.png), url(../img/coin-value-litecoin.png)
+					background-position: left top , right center
+					span
+						padding-left: 0
+						padding-right: 30px
+						background-image: url(../img/coin-value-big-up.png)
+						background-position: right center
+			&.ethereun
+				text-align: left
+				width: 365px
+				.coin-value
+					text-align: right
+					background-image: url(../img/coin-value-ethereun-bg.png), url(../img/coin-value-ethereun.png)
+					background-position: right top , left center
+					font-size: 30px
+					span
+						background-image: url(../img/coin-value-small-down.png)
+			&.dash
+				text-align: right
+				float: right
+				width: 365px
+				.coin-value
+					text-align: left
+					background-image: url(../img/coin-value-dash-bg.png), url(../img/coin-value-dash.png)
+					background-position: left top , right center
+					font-size: 30px
+					span
+						padding-left: 0
+						padding-right: 30px
+						background-image: url(../img/coin-value-small-down.png)
+						background-position: right center
+		.content-text
+			text-align: center
+			padding-top: 50px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				height: 69%
+				width: 100%
+				background-image: url(../img/header-button-after.png)
+				background-repeat: no-repeat
+				background-position: center top
+				background-size: 98% 98%
+				top: 55px
+				left: 0
+			p
+				font-weight: 300
+				padding: 0 45px
+			.button
+				background: none
+				background-image: url(../img/header-button-bg.png)
+				background-repeat: no-repeat
+				width: 206px
+				z-index: 9
+				left: 0
+				line-height: 1.4
+				&::after, &::before
+					display: none
+
+	.statistics
+		background-image: url(../img/statistics-bg.png)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 100px
+		.flex-item
+			.info
+				position: relative
+				.title
+					font-family: intro
+					text-transform: uppercase
+					color: #DFDFDF
+					font-size: 16px
+					display: block
+				.value
+					font-size: 11px
+					text-transform: uppercase
+					color: $accent
+					line-height: 1
+					display: block
+					.bold
+						font-weight: bold
+						font-size: 23px
+						text-transform: uppercase
+				&.work-time
+					background-image: url(../img/statistics-clock.png)
+					background-repeat: no-repeat
+					background-position: center
+					background-size: 115%
+					width: 207px
+					height: 207px
+					text-align: center
+					display: block
+					margin: 0 auto
+					padding-top: 60px
+					.title
+						font-family: intro
+						font-size: 16px
+						color: $accent
+					.value
+						font-size: 14px
+						font-weight: bold
+						.bold
+							font-size: 54px
+				&.investment, &.payout
+					text-align: right
+				&.investment, &.account
+					margin-bottom: 30px
+
+
+.description
+	overflow: hidden
+	padding: 100px 0 0
+	background-image: url(../img/description-bg.png)
+	background-repeat: no-repeat
+	background-position: right center
+	background-size: 55%
+	.h2
+		background-image: url(../img/h2-bg-one.png)
+		background-repeat: no-repeat
+		background-position: left top
+		padding: 20px	0
+	p
+		color: #818183
+		text-align: justify
+	.button
+		margin-top: 20px
+
+.calculate
+	background-image: url(../img/calculate-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	z-index: 9
+	padding:
+		top: 250px
+		bottom: 50px
+	overflow: hidden
+	.h2
+		text-align: right
+		float: right
+		background-image: url(../img/h2-bg-two.png)
+		background-repeat: no-repeat
+		background-position: right center
+		margin-bottom: 50px
+	.block
+		text-align: center
+		background-image: url(../img/calculate-block-bg.png)
+		background-repeat: no-repeat
+		background-position: center top
+		padding-bottom: 50px
+		cursor: pointer
+		&.mg-top
+			margin-top: 30px
+		.h4
+			padding-top: 20px
+			line-height: 1
+			margin-bottom: 15px
+		.persent
+			font-size: 58px
+			font-weight: bold
+			color: #fff
+		.list
+			list-style-type: none
+			padding: 0
+			li
+				background-color: #EDEDED
+				padding: 3px 10px
+				margin: 10px auto
+				width: 220px
+				border-radius: 15px
+				font-size: 12px
+				text-transform: uppercase
+				color: #B2B2B2
+				text-align: left
+				.bold
+					font-weight: bold
+					color: #545454
+					float: right
+		.button
+			text-decoration: none
+			font-size: 12px
+			padding: 10px 15px
+			left: 0px
+			margin-top: -5px
+			width: 130px
+			&::before
+				border: 19px solid transparent
+				border-left: 23px solid $accent
+			&::after
+				border: 20px solid transparent
+				border-right: 23px solid $accent
+		.arrow
+			width: 33px
+			height: 33px
+			border-radius: 50%
+			border: solid 1px #E9E9E9
+			display: block
+			margin: 5px auto 0
+			background-image: url(../img/calulate-block-arrow-up.png)
+			background-repeat: no-repeat
+			background-position: center
+		.block-hover
+			opacity: 0
+			position: absolute
+			top: 0
+			bottom: 0
+			left: -1px
+			right: 0
+			background-image: url(../img/calculate-block-bg-hover.png)
+			background-repeat: no-repeat
+			background-position: top center
+			z-index: 9
+			transition: opacity .25s ease
+			&.mg-top
+				margin-top: 30px
+			.list-hover
+				list-style-type: none
+				padding: 0
+				li
+					padding: 3px 10px
+					margin: 25px auto
+					width: 230px
+					font-size: 16px
+					text-transform: uppercase
+					color: #B2B2B2
+					text-align: left
+					.bold
+						font-weight: bold
+						color: $accent
+						float: right
+						position: relative
+						&::before
+							content: ''
+							position: absolute
+							display: block
+							width: 30px
+							height: 1px
+							background-color: #EDEDED
+							top: 50%
+							right: 110%
+					&:nth-child(1)
+						.bold
+							&::before
+								right: 180%
+					&:nth-child(2), &:nth-child(3)
+						.bold
+							&::before
+								right: 150%
+					&:nth-child(4)
+						.bold
+							&::before
+								right: 120%
+			.arrow
+				background-image: url(../img/calulate-block-arrow-down.png), linear-gradient(#864588, #AD393D)
+		&:hover
+			>.block-hover
+				opacity: 1
+	.plan, .amount
+		width: 49%
+		display: inline-block
+		position: relative
+		.title
+			display: block
+		select, input
+			width: 100%
+			background-color: #EFEFEF
+			padding: 10px
+			border: #E6E6E6 1px solid
+			border-radius: 5px
+			font-weight: bold
+			color: #BFBFBF
+			outline: none
+		&::after
+			width: 188px
+			height: 116px
+			content: ''
+			position: absolute
+			display: block
+			top: 100%			
+			background-repeat: no-repeat
+			z-index: 0
+	.plan::after
+		left: 0
+		background-image: url(../img/plan-after.png)
+	.amount::after
+		right: 0
+		background-image: url(../img/amount-after.png)
+	.payout
+		text-align: center
+		margin: 20px 0 10px
+		.title
+			display: block
+		.value
+			color: $accent
+			text-transform: uppercase
+			.bold
+				font-size: 30px
+				font-weight: bold
+	.button
+		margin: 0 auto
+		display: block
+		left: 0
+		padding: 10px
+		width: 200px
+
+.advantages
+	background-image: url(../img/advantages-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	top: -70px
+	padding: 180px 0
+	overflow: hidden
+	.h2
+		font-weight: normal
+		background-image: url(../img/h2-bg-three.png)
+		background-repeat: no-repeat
+		background-position: left center
+		padding: 20px 0
+	.block
+		background-repeat: no-repeat
+		background-position: left top
+		margin: 30px 0
+		padding: 
+			left: 100px
+			top: 26px
+		.title
+			text-transform: uppercase
+			font-weight: bold
+			display: block
+			margin-bottom: 5px
+		&.one
+			background-image: url(../img/advantages-icon-1-bg.png)
+		&.two
+			background-image: url(../img/advantages-icon-2-bg.png)
+		&.three
+			background-image: url(../img/advantages-icon-3-bg.png)
+		&.four
+			background-image: url(../img/advantages-icon-4-bg.png)
+		&.five
+			background-image: url(../img/advantages-icon-5-bg.png)
+
+.statistic
+	background-image:  url(../img/statistic-bg.png)
+	background-repeat: no-repeat
+	background-position:  center top
+	background-size: cover
+	position: relative
+	top: -150px
+	padding:
+		top: 200px
+		bottom: 150px
+	overflow: hidden
+	.h2
+		text-align: center
+		padding: 50px
+		background-image: url(../img/h2-bg-four.png)
+		background-repeat: no-repeat
+		background-position: center
+		display: block
+		margin: 50px auto
+		&::after
+			left: 60%
+		&::before
+			right: 60%
+	.table
+		margin-top: 00px
+		width: 100%
+		background-image: url(../img/table-bg.png)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		margin-bottom: 30px
+		table
+			display: inline-block
+			width: 48%
+			padding: 10px 30px 0
+			position: relative
+			&:last-child
+				margin-left: 3%
+			.table-title
+				position: absolute
+				top: -62px
+				left: 0
+				font-family: intro
+				font-size: 38px
+				color: #D3D3D3
+			tbody
+				width: 100%
+				tr
+					border-bottom: 1px solid#EFEFEF
+					&:last-child
+						border-bottom: none
+					td
+						padding: 12px 30px
+						white-space: nowrap
+						&.coin
+							float: right
+						img
+							display: inline-block
+							margin-right: 10px
+	.title-pay
+		margin-top: 50px
+		font-family: intro
+		color: #fff
+		background-image: url(../img/pay-title.png)
+		background-repeat: no-repeat
+		background-position: center
+		padding: 10px 45px
+		display: block
+		text-align: center
+	.pay-icons
+		background-image: url(../img/pay-icons-bg.png)
+		background-repeat: no-repeat
+		background-position: center top
+		background-size: cover
+		text-align: center
+		margin: -5px 0 20px
+		.wrapper
+			padding: 40px 20px
+			position: relative
+			img
+				width: 100%
+				height: auto
+
+footer
+	background-image: url(../img/footer-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center top
+	position: relative
+	top: -230px
+	padding-top: 100px
+	.logo-footer
+		text-align: center
+		padding-top: 12px
+		position: relative
+		img
+			margin-bottom: 10px
+		span
+			font-size: 14px
+			text-transform: uppercase
+			color: #fff
+			display: block
+			.bold
+				font-weight: bold
+				font-size: 16px
+				line-height: 1
+	.menu
+		padding: 5px 0
+		position: relative
+		width: 100%
+		.footer-nav
+			text-transform: none
+			padding: 0
+			margin: 0
+			position: relative
+			li
+				display: inline-block
+				padding: 10px 30px
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					height: 100%
+					width: 10px
+					background-image: url(../img/footer-nav-arrow.png)
+					background-repeat: no-repeat
+					background-position: right center
+					right: -5px
+					top: 0
+				&:first-child
+					padding-left: 0
+				&:last-child
+					&::after
+						display: none
+				a
+					padding: 13px 0
+					color: #fff
+					text-transform: uppercase
+					text-decoration: none
+					font-weight: bold
+					transition: border .25s ease
+					&.active, &:hover, &:focus
+						text-decoration: underline
+	.soc-icons
+		left: -50px
+		position: relative
+		width: 200px
+		margin-top: 10px
+		.icon
+			margin-left: 3px
+			cursor: pointer
+			&:first-child
+				margin-left: 0
+	.info
+		padding-top: 5px
+		box-sizing: border-box
+		position: relative
+		top: -55px
+		&.mail
+			padding-left: 30px
+		.title
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 16px
+		p
+			font-size: 16px
+
+//stile select by plugin
+.jq-selectbox
+	width: 100%
+	height: 50px
+	outline: none
+.jq-selectbox__select
+	background: none
+	border: #E6E6E6 1px solid
+	border-radius: 5px
+	font-weight: bold
+	color: #666666
+	height: 45px
+	box-shadow: none
+.jq-selectbox__select:hover
+	background: none
+.jq-selectbox__select-text
+	overflow: visible
+	padding: 5px
+.jq-selectbox__trigger
+	border-left: none
+	padding: 5px
+.jq-selectbox:hover .jq-selectbox__trigger-arrow
+	border-top-color: #CDCDCD
+.jq-selectbox__trigger-arrow
+	top: 20px
+.jq-selectbox li.selected, .jq-selectbox li:hover
+	background-color: $accent
+.jq-selectbox__dropdown
+	font: 16px $default-font
+.jq-selectbox li
+	padding: 10px
+
+
+//modal popup styles
+.modal-enter
+	display: none
+	left: 50%
+	background-color: none
+	background-image: url(../img/popup-enter-bg.png)
+	background-repeat: no-repeat
+	background-position: left top
+	background-color: #fff
+	padding: 50px
+	text-align: center
+	width: 340px
+	position: absolute
+	top: 150px
+	input, a
+		display: block
+		margin: 10px auto
+		text-decoration: none
+		color: #fff
+	input
+		width: 100%
+		padding: 10px
+		background: rgba(#000, 0.3)
+		border-radius: 5px
+		border: none
+		color: #fff 
+		padding-left: 50px
+		background-repeat: no-repeat
+		background-position: 10px center
+		position: relative
+		&::placeholder
+			color: #AC8391
+	input::before
+		content: ''
+		width: 100%
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		background-color: #000
+		z-index: 99
+	input[name=name]
+		background-image: url(../img/input-user.png)
+	input[name=password]
+		background-image: url(../img/input-password.png)
+	.button
+		width: 150px
+		left: 0px
+		background-color: #fff
+		color: $accent !important
+		&::after
+			border-right: 22px solid #fff
+		&::before
+			border-left: 20px solid #fff
+
+.modal-registration
+	display: none
+	background-image: url(../img/popup-registration-bg.png)
+	background-repeat: no-repeat
+	background-position: left top
+	width: 972px
+	height: 372px
+	position: absolute
+	top: 150px
+	left: 17%	
+	.block
+		display: inline-block
+		width: 33%
+		padding: 50px 20px
+		height: 85%
+		input
+			display: block
+			margin: 10px 0
+			text-decoration: none
+			color: #fff
+			width: 100%
+			padding: 10px
+			background: rgba(#000, 0.3)
+			border-radius: 5px
+			border: none
+			color: #fff 
+			padding-left: 50px
+			background-repeat: no-repeat
+			background-position: 10px center
+			position: relative
+			&::placeholder
+				color: #AC8391
+		input::before
+			content: ''
+			width: 100%
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			background-color: #000
+			z-index: 99
+		input[name=bitcoin]
+			background-image: url(../img/input-bitcoin.png)
+		input[name=pm]
+			background-image: url(../img/input-pm.png)
+		input[name=advcash]
+			background-image: url(../img/input-advcash.png)
+		input[name=payeer]
+			background-image: url(../img/input-payeer.png)
+		input[name=mail]
+			background-image: url(../img/input-mail.png)
+		input[name=sponsor]
+			background-image: url(../img/input-sponsor.png)
+		input[name=answer]
+			background-image: url(../img/input-answer.png)
+		input[name=name], input[name=username]
+			background-image: url(../img/input-user.png)
+		input[name=password], input[name=re-password]
+			background-image: url(../img/input-password.png)
+		input[name=question]
+			background-image: url(../img/input-question.png)
+	label
+		color: #fff
+		margin-left: 20px
+		cursor: pointer
+		input
+		a
+			color: #fff
+			text-decoration: underline
+	.button
+		width: 200px
+		left: 0px
+		background-color: #fff
+		color: $accent !important
+		display: inline-block
+		float: right
+		margin-right: 50px
+		top: -10px
+		&::after
+			border-right: 22px solid #fff
+		&::before
+			border-left: 20px solid #fff
+
+
+@import "media" // Always at the end
