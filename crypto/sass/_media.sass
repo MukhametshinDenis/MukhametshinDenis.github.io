@@ -63,6 +63,10 @@
 			.footer-nav
 				li
 					padding: 10px 20px
+
+	.modal-registration
+		right: 0%
+		left: 0%
 //Medium: ≥768px
 +media-breakpoint-down(md)
 	header
@@ -88,7 +92,7 @@
 				&::after
 					content: ''
 					position: absolute
-					left: -43px
+					left: -44px
 					top: 0
 					bottom: 0
 					border: 22px solid transparent
@@ -96,13 +100,10 @@
 
 			.registration
 				display: inline-block
+				margin-left: 20px
 				span
 					display: none
-			.icon-enter
-				display: inline-block
-				position: absolute
-				top: 10px
-				right: -30px
+			
 		.statistics
 			.flex-item
 				.info
@@ -152,8 +153,33 @@
 		.info
 			top: 0
 			text-align: left
-							
-
+					
+	.modal-enter
+		width: 300px
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-size: cover
+		background-position: center -30px
+	.modal-registration
+		top: 0
+		bottom: 0
+		background-size: cover
+		background-position: center -30px
+		width: 500px
+		.block
+			padding: 20px 50px
+			width: 100%
+		label
+			display: block
+			margin: 10px auto
+			text-align: center
+		.button
+			text-align: center
+			display: block
+			margin: 20px auto
+			float: none
 //Small: ≥576px
 +media-breakpoint-down(sm)
 	header
@@ -173,10 +199,11 @@
 				.nav
 					top: 50px
 					left: -102%
-					padding: 20px
+					padding: 10px 20px
 					width: 204%
 					position: absolute
 					display: none
+					z-index: 999
 					&::after, &::before
 						display: none
 					li
@@ -184,14 +211,20 @@
 						text-align: center
 						border-bottom: 1px solid #ddd
 						position: relative
-						&:last-child
+						z-index: 999
+						padding: 0
+						&:nth-child(5)
 							border-bottom: none
+						&:last-child
+							display: none
 						a
 							width: 100%
 							display: block
 							&.active, &:hover, &:focus
 								border: none
 								color: $accent
+			.registration
+				margin-left: 0
 			.icon-enter
 				display: inline-block
 				position: absolute
@@ -284,6 +317,29 @@
 				margin: 0 20px
 				border-top: solid 1px #BF4E51
 
+	footer
+		.info
+			text-align: center
+
+	.modal-registration
+		top: 0
+		bottom: 0
+		background-size: cover
+		background-position: center -30px
+		width: 300px
+		padding: 10px 0
+		.block
+			padding: 10px 20px
+			width: 100%
+		label
+			display: block
+			margin: 10px auto
+			text-align: center
+		.button
+			text-align: center
+			display: block
+			margin: 20px auto
+			float: none
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px
