@@ -1,0 +1,292 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//@media only screen and (max-width : 1570px)
+//	/**/
+//	.consultation
+//		.wrapper-img
+//			left: 0
+//			img
+//				width: 100%
+//		.phone-order
+//			left: -20px
+//		&.consultation-news
+//			.wrapper-img
+//				left: 0
+//				img
+//					width: 100%
+//			.phone-order
+//				left: -20px
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+	
+//Large: ≥992px
++media-breakpoint-down(lg)
+	.header
+		&-content
+			.letter-u
+				right: -500px
+
+	.consultation
+		.wrapper-img
+			left: 0
+			img
+				width: 100%
+		.phone-order
+			left: 0
+			.h3, span
+				white-space: normal
+			span
+				text-align: left
+		&.consultation-news
+			.wrapper-img
+				left: 0
+				img
+					width: 100%
+			.phone-order
+				left: 0
+				.h3, span
+					white-space: normal
+				span
+					text-align: left
+
+	.advantage-one
+		.advantage-container
+			padding: 100px
+			p
+				white-space: normal
+
+	.services
+		.wrap-img
+			left: 0
+
+	.advantage-two
+		.wrap-title-img
+			width: 500px
+			.h3
+				right: -30px
+		.wrap-img
+			right: 30px
+
+	.blog
+		.column
+			width: 35%
+			&.two
+				width: 29%
+//Medium: ≥768px
++media-breakpoint-down(md)
+	.header
+		.header-top
+			flex-wrap: wrap
+			.logo-wrapper
+				width: 100%
+				text-align: center
+				padding-bottom: 20px
+		&-content
+			.letter-u
+				right: -630px
+
+	.consultation
+		padding-bottom: 30px
+		.h3
+			margin-top: 50px
+
+	.advantage-one
+		.advantage-container
+			padding: 50px
+
+	.services
+		.tab-wrap
+			.nav-tab-list
+				&-link
+					padding: 15px 80px 15px 0
+		.wrap-img
+			margin-top: 50px
+
+	.advantage-two
+		.wrap-title-img
+			width: 500px
+			.h3
+				right: -30px
+		.wrap-img
+			right: -100px
+			top: auto
+			bottom: -150px
+			img
+				width: 70%
+
+	.blog
+		.column
+			width: 35%
+			&.two
+				width: 30%
+			.article
+				padding: 14px 26px
+				&.edge
+					span
+						display: block
+						margin-top: 60px
+				&.small
+					span
+						display: block
+						margin-top: 92px
+
+	.content
+		.h3
+			font-size: 24px
+		.share
+			span
+				margin-right: 50px
+			.wrap-icon
+				margin-right: 15px
+//Small: ≥576px
++media-breakpoint-down(sm)
+	.header
+		&-top
+			flex-wrap: wrap
+			justify-content: center
+			nav
+				text-align: center
+			.phone
+				margin: 30px
+		&-content
+			padding-top: 30px
+			text-align: center
+			&-main
+				margin: 0 auto
+			.letter-u
+				display: none
+
+	.advantage-one
+		.advantage-container
+			padding: 30px
+			p
+				margin-left: 0
+				white-space: normal
+			.button
+				display: block
+				margin: 20px auto
+				padding: 20px 12px
+				min-width: auto
+
+	.services
+		.tab-wrap
+			.nav-tab-list
+				display: block
+				&-link
+					padding: 15px 0px 15px 0
+					text-align: center
+			.box-tab-cont
+				.tab-cont
+					ul
+						display: block
+						margin: 0 auto
+						width: 300px
+						li
+							margin: 20px 0
+		.wrap-img
+			display: none
+		.button
+			display: block
+			width: 300px
+			margin: 20px auto
+
+	.advantage-two
+		.wrap-title-img
+			width: 300px
+			.h3
+				right: -80px
+				top: 60px
+				font-size: 30px
+		.wrap-img
+			right: -200px
+			img
+				width: 44%
+
+	.blog
+		padding: 100px 0
+		&-articles
+			margin-top: 70px
+			.column
+				width: 100%
+				&.two
+					width: 100%
+
+	.content
+		.row
+			.blog-back
+				top: -60px
+				left: 20px
+//Extra small: >0
++media-breakpoint-down(xs)
+	.h2
+		font-size: 52px
+	.header
+		&-top
+			nav
+				width: 100%
+				a
+					display: block
+					margin: 10px auto
+			.phone
+				a
+					font-size: 20px
+	.services
+		.tab-wrap
+			.box-tab-cont
+				.tab-cont
+					ul
+						&.right
+							margin: 0px auto
+	.advantage-two
+		&-container
+			padding: 20px
+			.wrap-title-img
+				width: 220px
+				margin: 0 auto
+				.h3
+					position: static
+					font-size: 30px
+			p
+				width: 220px
+				display: block
+				margin: 50px auto
+			.button
+				display: block
+				margin: 0 auto
+				max-width: 250px
+		.wrap-img
+			display: none
+
+	footer
+		text-align: center
+		span
+			margin: 30px 0
+			&.column-2
+				margin-top: 30px
+			&.column-3-adress
+				margin: 15px 0
+			.big
+				display: inline
+				margin-left: 30px
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)

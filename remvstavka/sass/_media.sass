@@ -1,0 +1,159 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (min-width : 1600px)
+	/**/
+	.order
+		background-size: contain
+		background-position: 40% bottom
+
+// ≥1200px
++media-breakpoint-down(lg)
+// ≥992px
++media-breakpoint-down(md)
+	.header
+		.h1
+			font-size: 50px
+
+	.advantages
+		.h2
+			font-size: 60px
+		&-item
+			margin: 15px auto
+			padding: 30px
+			height: 470px
+			width: 100%
+			.wrap-icon
+				margin: 0 0px 20px
+			.item-title
+				line-height: 1.3em
+				height: 25px
+			p
+				line-height: 1.3em
+	.order
+		background-position: 230% 25%
+		background-size: 80%
+		.h2
+			text-align: center
+		.h4
+			text-align: left
+			width: 50%
+			padding-bottom: 100px
+
+// ≥768px
++media-breakpoint-down(sm)
+	.header
+		.h1
+			font-size: 38px
+
+	.advantages
+		&-item
+			width: 320px
+			padding: 30px 50px
+			height: auto
+
+	.marks
+		.h2
+			font-size: 50px
+		&-carousel
+			.item
+				width: auto
+
+	.reviews
+		.h2
+			font-size: 50px
+		&-carousel
+			.item
+				width: auto
+
+	.order
+		background-position: 350% 35%
+		background-size: 90%
+		.h2
+			text-align: center
+		.h4
+			text-align: left
+			width: 50%
+			padding-bottom: 80px
+// ≥576px
++media-breakpoint-down(xs)
+	.header
+		.h1
+			font-size: 38px
+			padding-top: 190px
+		a.show-modal
+			width: 75%
+	.advantages
+			&-item
+				width: 280px
+				padding: 30px 30px
+				height: auto
+
+	.advantages, .marks, .reviews, .order
+		.h2
+			font-size: 38px
+
+	.reviews
+		border-width: 10px
+
+	.order
+		background-position: -380% 25%
+		background-size: 110%
+		.h2
+			text-align: center
+		.h4
+			text-align: left
+			width: 57%
+			padding-bottom: 100px
+
+@media only screen and (max-width : 455px)
+	/**/
+	.order
+		background-position: -400% 30%
+		background-size: 110%
+		.h2
+			text-align: center
+		.h4
+			text-align: left
+			width: 71%
+			padding-bottom: 100px
+
+@media only screen and (max-width : 395px)
+	/**/
+	.order
+		background-position: -385% 32%
+		.h4
+			padding-bottom: 91px
+			font-size: 26px
+			width: 69%
+		.button
+			margin: 30px auto
+@media only screen and (max-width : 355px)
+	/**/
+	.order
+		background-position: -385% 30%
+		background-size: 110%
+		.h2
+			text-align: center
+		.h4
+			text-align: left
+			font-size: 26px
+			width: 71%
+			padding-bottom: 50px
+/*==========  Mobile First  ==========*/
+/* Large Devices, Wide Screens */
+
+
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
