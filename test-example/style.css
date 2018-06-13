@@ -1,0 +1,62 @@
+body {
+	text-align: center;
+}
+h1 {
+	margin: 100px 0 200px;
+	display: block;
+}
+span {
+	padding: 5px;
+}
+input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	padding: 5px;
+}
+#inputC, #inputB {
+	display: none;
+}
+.wrapper {
+	position: relative;
+	width: 875px;
+	margin: 0 auto;
+}
+.wrapper span {
+	font-size: 20px;
+	position: relative;
+	top: 10px;
+	font-weight: bold;
+}
+.wrapper > img {
+	z-index: 9;
+	position: relative;
+}
+.wrapperA {
+	background-image: url(setacurva.png);
+	background-size: 100%;
+	background-position: left 30px;
+	background-repeat: no-repeat;
+	width: 282px;
+	height: 165px;
+	position: absolute;
+	top: -157px;
+	left: 27px;
+	z-index: 8;
+}
+.wrapperB {
+	background-image: url(setacurva.png);
+	background-size: 100%;
+	background-position: left 30px;
+	background-repeat: no-repeat;
+	width: 159px;
+	height: 100px;
+	position: absolute;
+	top: -101px;
+	left: 307px;
+}
+
+
+
+
+
